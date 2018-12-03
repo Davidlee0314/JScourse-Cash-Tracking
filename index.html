@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link hrft="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Budgety</title>
+  </head>
+  <body>
+    <div class="top">
+      <div class="budget">
+        <div class="budgetTitle">Available budget in<span class="budgetTitleMonth">%Month%</span></div>
+        <div class="budgetValue"> </div>
+        <div class="budgetIncome clearfix">
+          <div class="budgetIncomeText">Income</div>
+          <div class="right box">
+            <div class="budgetIncomeValue"> </div>
+            <div class="budgetIncomePercentage">&nbsp;</div>
+          </div>
+        </div>
+        <div class="budgetExpense clearfix">
+          <div class="budgetExpenseText">Expenses</div>
+          <div class="right box clearfix">
+            <div class="budgetExpenseValue"> </div>
+            <div class="budgetExpensePercentage"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="add">
+        <div class="addContainer">
+          <select class="addType">
+            <option value="income" selected>+</option>
+            <option value="expense">-</option>
+          </select>
+          <input type="text" placeholder="Add description" class="addDescription">
+          <input type="number" placeholder="Value" class="addValue">
+          <button class="addbtn"><i class="ion-ios-checkmark-outline"></i></button>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <div class="income">
+          <h2 class="incomeTitle">Income</h2>
+          <div class="incomeList">
+          </div>
+        </div>
+        <div class="expense">
+          <h2 class="expenseTitle">Expenses</h2>
+          <div class="expenseList">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="project2.js"></script>
+  </body>
+</html>

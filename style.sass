@@ -1,0 +1,260 @@
+*
+	margin: 0px
+	padding: 0px
+	box-sizing: border-box
+	// border: solid 1px black 
+
+.clearfix
+	&::after
+		content: ""
+		display: table
+		clear: both
+
+body
+	color: #555
+	font-family: arial
+	font-size: 16px
+	position: relative
+	height: 100vh
+	font-weight: 400
+
+.right
+	float: right
+	// width: 200px
+.red
+	color: #FF5049 !important
+.red-focus
+	&:focus
+		border: solid 1px #FF5049 !important
+
+//top
+
+.top
+	height: 45vh
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(back.png)
+	background-size: cover
+	background-position: center 
+	position: relative
+
+.budget
+	position: absolute
+	width: 400px
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	color: #fff
+	.budgetTitle
+		font-size: 18px
+		text-align: center
+		margin-bottom: 10px
+		font-weight: 300
+	.box
+		top: 50%
+		transform: translateY(-50%)
+		position: relative
+		width: 110px
+	.budgetValue
+		height: 40px
+		font-weight: 300
+		font-size: 46px
+		text-align: center
+		margin-bottom: 25px
+		letter-spacing: 2px
+	.budgetIncome, .budgetExpense
+		height: 50px
+		padding: 12px
+		text-transform: uppercase
+	.budgetIncome
+		margin-bottom: 10px
+		background-color: #28B9B5
+	.budgetExpense
+		background-color: #FF5049
+
+	.budgetIncomeText, .budgetExpenseText
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		letter-spacing: 1px
+		float: left
+	.budgetIncomePercentage, .budgetExpensePercentage
+		position: absolute
+		display: inline-block
+		float: left
+		width: 40px
+		font-size: 11px
+		padding: 3px 0px
+		margin-left: 10px
+	.budgetIncomeValue, .budgetExpenseValue
+		position: relative
+		left: -70px
+		width: 120px
+		display: inline-block
+		text-align: left
+	.budgetExpensePercentage
+		letter-spacing: 1px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 20%
+		height: 20px
+		background-color: rgba(255,255,255,0.2)
+		text-align: center
+		border-radius: 3px
+
+//bottom
+.add
+	padding: 14px
+	border-bottom: solid 1px #e7e7e7
+	background-color: #f7f7f7
+
+	.addContainer
+		margin: 0 auto
+		text-align: center
+		padding: 5px
+
+		.addType
+			width: 55px
+			border: solid 1px #e7e7e7
+			height: 44px
+			font-size: 18px
+			color: inherit
+			background-color: #fff
+			margin-right: 10px
+			font-weight: 300
+			transition: border 0.3s
+		.addDescription
+			border: solid 1px #e7e7e7
+			padding: 13px 10px
+			width: 400px
+		.addValue
+			border: solid 1px #e7e7e7
+			padding: 13px 10px
+			width: 100px
+		.addbtn 
+			font-size: 35px
+			background: none
+			border: none
+			color: #28B9B5
+			cursor: pointer
+			display: inline-block
+			vertical-align: middle
+			line-height: 1.1
+			margin-left: 10px
+			&:active
+				transform: translateY(2px)
+			&:focus
+				outline: none
+
+		.addType:focus, .addDescription:focus, .addValue:focus
+			outline: none
+			border: solid 1px #28B9B5
+
+
+			
+
+//list
+.container
+	width: 1100px
+	margin: 60px auto
+	background-color: white
+	
+	.income
+		float: left
+		width: 475px 
+		margin-right: 50px
+		.incomeTitle
+			color: #28B9B5
+		.itemValue, .itemDeletebtn
+			color: #28B9B5
+
+	.expense 
+		float: left
+		width: 475px
+		.expenseTitle
+			color: #FF5049
+		.itemValue, .itemDeletebtn, .itemPercentage
+			color: #FF5049
+
+	h2
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 400
+		margin-bottom: 15px
+
+	.item
+		height: 50px
+		padding: 13px
+		border-bottom: solid 1px #e7e7e7
+		&:hover
+			.itemDeletebtn
+				display: block
+			.itemValue
+				transform: translateX(-20px)
+			.itemPercentage
+				transform: translateX(-20px)
+
+	.item:first-child
+		border-top: solid 1px #e7e7e7
+
+	.item:nth-child(even)
+		background-color: #f7f7f7
+
+	.itemDescription
+		float: left
+	.itemValue
+		float: left
+		transition: transform 0.3s
+	.itemPercentage
+		float: left
+		margin-left: 20px
+		transition: transform 0.3s
+		font-size: 11px
+		background-color: #FFDAD9
+		padding: 3px
+		border-radius: 3px 
+		width: 32px
+		text-align: center 
+	.itemDelete
+		float: left
+
+	.itemDeletebtn
+		font-size: 22px 
+		background: none
+		border: none
+		cursor: pointer
+		display: inline-block
+		vertical-align: middle
+		line-height: 1
+		display: none
+		&:focus
+			outline: none
+		&:active
+			transform: translateY(2px)
+
+.unpaid
+	background-color: #FFDAD9 !important
+	cursor: pointer
+	color: #FF5049
+
+	.itemPercentage
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1)
+	&:hover
+		.itemDescription
+			font-weight: 900
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+

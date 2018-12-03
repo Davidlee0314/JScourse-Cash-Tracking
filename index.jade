@@ -1,0 +1,81 @@
+doctype html
+html(lang = "en")
+	head
+		meta(charset = "UTF-8")
+		link(hrft = "https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css")
+		link(href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css")
+		link(type="text/css" rel="stylesheet" href="style.css")
+		title Budgety
+
+	body
+		.top
+			.budget
+				.budgetTitle Available budget in
+					span.budgetTitleMonth %Month%
+				.budgetValue 
+				
+				.budgetIncome.clearfix
+					.budgetIncomeText Income
+					.right.box
+						.budgetIncomeValue 
+						.budgetIncomePercentage &nbsp;
+				.budgetExpense.clearfix
+					.budgetExpenseText Expenses
+					.right.box.clearfix
+						.budgetExpenseValue 
+						.budgetExpensePercentage 
+
+		.bottom
+			.add
+				.addContainer
+					select.addType
+						option(value = "income" selected) +
+						option(value = "expense") -
+					input.addDescription(type = "text" placeholder = "Add description")
+					input.addValue(type="number" placeholder="Value")
+					button.addbtn
+						i.ion-ios-checkmark-outline
+			.container.clearfix
+				.income
+					h2.incomeTitle Income
+					.incomeList
+						//- #income0.item.clearfix
+						//- 	.itemDescription Salary
+						//- 	.right.clearfix
+						//- 		.itemValue + 2,100.00
+						//- 		.itemDelete
+						//- 			button.itemDeletebtn
+						//- 				i.ion-ios-close-outline
+						//- #income1.item.clearfix
+						//- 	.itemDescription Sold car
+						//- 	.right.clearfix
+						//- 		.itemValue + 1,500.00
+						//- 		.itemDelete
+						//- 			button.itemDeletebtn
+						//- 				i.ion-ios-close-outline
+				.expense
+					h2.expenseTitle Expenses
+					.expenseList
+						//- #expense0.item.clearfix
+						//- 	.itemDescription Apartment rent
+						//- 	.right.clearfix
+						//- 		.itemValue - 900.00
+						//- 		.itemPercentage 21%
+						//- 		.itemDelete
+						//- 			button.itemDeletebtn
+						//- 				i.ion-ios-close-outline
+						//- #expense1.item.clearfix
+						//- 	.itemDescription Grocery shopping
+						//- 	.right.clearfix
+						//- 		.itemValue - 435.28
+						//- 		.itemPercentage 10%
+						//- 		.itemDelete
+						//- 			button.itemDeletebtn
+						//- 				i.ion-ios-close-outline
+		script(src="project2.js")
+
+					
+
+												
+
+
